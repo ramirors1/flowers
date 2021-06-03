@@ -43,45 +43,37 @@ const bluesy = {
     price: 1.05
 }
 const bluesyid = calcId(flowers)
-bluesy.id =bluesyid
+bluesy.id = bluesyid
 flowers.push(bluesy) 
 
- 
 console.log(flowers)
 
 const findExpensiveFlowers = () => {
     const expensiveFlowers = []  // Do not change this code
     
-
+    for (const flower of flowers) {
+        if (flower.price > 1) 
+        expensiveFlowers.push(flower)
+     
+     }
     /*
         Write a for..of loop that iterate the array
         of flowers, and if the price of a flower is
         greater than or equal to 1.00, it should be
         added to the `expensiveFlowers` array.
     */
-        
-
-
-
+           
     return expensiveFlowers  // Do not change this code
 }
 
-for (const flower of flowers) {
-    if (flowers.price >= 1) {
- console.log(` ${flowers.species} are expensive.`)
- }
-}
+console.log(findExpensiveFlowers())
+
+
 
 // Do not touch this code
 module.exports = {
     findExpensiveFlowers, addFlower
 }
-
-
-
-
-
-
 
 // var currentdate = new Date();
 // var datetime = "Last Sync: " + currentdate.getDay() + "/" + currentdate.getMonth()
