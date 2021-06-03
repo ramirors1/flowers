@@ -16,13 +16,13 @@ const flowers = [
 const calcId = (arr) => {
     const lastIndex = arr.length - 1
     if (lastIndex === -1) {
-       const newId = 1
-       return newId
+        const newId = 1
+        return newId
     }
     const lastItemId = arr[lastIndex].id
     const newId = lastItemId + 1
     return newId
-  }
+}            
 const addFlower = (flowerObject) => {
     /*
         This function should add an `id` property
@@ -35,18 +35,23 @@ const addFlower = (flowerObject) => {
         object, the object should then be put into the
         `flowers` array.
     */
-   color: "Blue",
-   species: "Bluesy",
-   price: 1.05
 }
+const bluesy = {
+    
+    color: "Blue",
+    species: "Bluesy",
+    price: 1.05
+}
+const bluesyid = calcId(flowers)
+bluesy.id =bluesyid
+flowers.push(bluesy) 
 
-const bluesyid = (newId)
-const bluesy.id = bluesyid
-flowers.push(bluesy)
+ 
+console.log(flowers)
 
 const findExpensiveFlowers = () => {
     const expensiveFlowers = []  // Do not change this code
-
+    
 
     /*
         Write a for..of loop that iterate the array
@@ -54,18 +59,37 @@ const findExpensiveFlowers = () => {
         greater than or equal to 1.00, it should be
         added to the `expensiveFlowers` array.
     */
-
+        
 
 
 
     return expensiveFlowers  // Do not change this code
 }
 
-
-
+for (const flower of flowers) {
+    if (flowers.price >= 1) {
+ console.log(` ${flowers.species} are expensive.`)
+ }
+}
 
 // Do not touch this code
 module.exports = {
     findExpensiveFlowers, addFlower
 }
 
+
+
+
+
+
+
+// var currentdate = new Date();
+// var datetime = "Last Sync: " + currentdate.getDay() + "/" + currentdate.getMonth()
+//     + "/" + currentdate.getFullYear() + " @ "
+//     + currentdate.getHours() + ":"
+//     + currentdate.getMinutes();
+
+
+
+
+  
